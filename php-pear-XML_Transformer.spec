@@ -26,7 +26,7 @@ tree without the need for XSLT. Single XML elements can be overloaded
 with PHP functions, methods and static method calls, XML namespaces
 can be registered to be handled by PHP classes.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Z klas± XML_Transformer mo¿na ³atwo zwi±zaæ funkcjonalno¶æ PHP z
