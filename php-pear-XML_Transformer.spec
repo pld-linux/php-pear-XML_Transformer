@@ -2,10 +2,10 @@
 %define         _class          XML
 %define         _subclass       Transformer
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_class}_%{_subclass} - XML Transformations in PHP
-Summary(pl):	%{_class}_%{_subclass} - Transformacje XML w PHP
+Summary:	%{_pearname} - XML Transformations in PHP
+Summary(pl):	%{_pearname} - Transformacje XML w PHP
 Name:		php-pear-%{_pearname}
-Version:	0.3
+Version:	0.4
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
