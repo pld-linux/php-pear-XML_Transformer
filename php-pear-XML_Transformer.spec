@@ -5,7 +5,7 @@
 Summary:	%{_pearname} - XML Transformations in PHP
 Summary(pl):	%{_pearname} - Transformacje XML w PHP
 Name:		php-pear-%{_pearname}
-Version:	0.6
+Version:	0.7
 Release:	1
 License:	PHP 3.00
 Group:		Development/Languages/PHP
