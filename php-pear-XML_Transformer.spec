@@ -6,12 +6,12 @@ Summary:	%{_pearname} - XML Transformations in PHP
 Summary(pl):	%{_pearname} - Transformacje XML w PHP
 Name:		php-pear-%{_pearname}
 Version:	0.8
-Release:	1
+Release:	2
 License:	PHP 3.00
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/
-BuildRequires:	rpm-php-pearprov
+BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
