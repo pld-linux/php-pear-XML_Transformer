@@ -2,15 +2,16 @@
 %define         _class          XML
 %define         _subclass       Transformer
 %define		_pearname	%{_class}_%{_subclass}
+%define		_status		stable
 Summary:	%{_pearname} - XML Transformations in PHP
 Summary(pl):	%{_pearname} - Transformacje XML w PHP
 Name:		php-pear-%{_pearname}
-Version:	0.8.1
+Version:	0.8.2
 Release:	1
 License:	PHP 3.00
 Group:		Development/Languages/PHP
-# Source0-md5:	1c9b9b596134badfababfb82f792c89f
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	d20de503a1cb7fd12f3dd76c3b8656aa
 URL:		http://pear.php.net/package/%{_pearname}/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -24,6 +25,8 @@ tree without the need for XSLT. Single XML elements can be overloaded
 with PHP functions, methods and static method calls, XML namespaces
 can be registered to be handled by PHP classes.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Z klas± XML_Transformer mo¿na ³atwo zwi±zaæ funkcjonalno¶æ PHP z
 tagami XML, transformuj±c wej¶ciowe drzewo XML w wyj¶ciowe drzewo XML
@@ -31,6 +34,8 @@ bez potrzeby stosowania XSLT. Pojedyñczy element XML mo¿e byæ
 przeci±¿ony funkcjami PHP, metodami i statycznymi wywo³aniami metod,
 przestrzeñ nazw XML mo¿e byæ zarejestrowana, aby mo¿na by³o je
 obs³ugiwaæ przez klasy PHP.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
