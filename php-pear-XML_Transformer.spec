@@ -5,7 +5,7 @@
 Summary:	%{_pearname} - XML Transformations in PHP
 Summary(pl):	%{_pearname} - Transformacje XML w PHP
 Name:		php-pear-%{_pearname}
-Version:	0.7
+Version:	0.8
 Release:	1
 License:	PHP 3.00
 Group:		Development/Languages/PHP
@@ -36,10 +36,12 @@ obs³ugiwaæ przez klasy PHP.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/{Driver,Namespace}
 
 install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}/%{_subclass}/Driver/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Driver
+install %{_pearname}-%{version}/%{_subclass}/Namespace/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Namespace
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,5 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %dir %{php_pear_dir}/%{_class}/%{_subclass}
+%dir %{php_pear_dir}/%{_class}/%{_subclass}/Driver
+%dir %{php_pear_dir}/%{_class}/%{_subclass}/Namespace
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
+%{php_pear_dir}/%{_class}/%{_subclass}/Driver/*.php
+%{php_pear_dir}/%{_class}/%{_subclass}/Namespace/*.php
