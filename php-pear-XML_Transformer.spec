@@ -9,6 +9,7 @@ Version:	0.8
 Release:	2
 License:	PHP 3.00
 Group:		Development/Languages/PHP
+# Source0-md5:	d1a9b649e2354e6b0b4ee67f9eff04ef
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
