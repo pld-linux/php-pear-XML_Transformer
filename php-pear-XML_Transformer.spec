@@ -4,8 +4,8 @@
 %define		_pearname	%{_class}_%{_subclass}
 %define		_status		stable
 
-Summary:	%{_pearname} - XML Transformations in PHP
-Summary(pl):	%{_pearname} - Transformacje XML w PHP
+Summary:	%{_pearname} - XML transformations in PHP
+Summary(pl):	%{_pearname} - transformacje XML-a w PHP
 Name:		php-pear-%{_pearname}
 Version:	0.9.0
 Release:	1
