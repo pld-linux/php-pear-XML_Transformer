@@ -3,15 +3,16 @@
 %define         _subclass       Transformer
 %define		_pearname	%{_class}_%{_subclass}
 %define		_status		stable
+
 Summary:	%{_pearname} - XML Transformations in PHP
 Summary(pl):	%{_pearname} - Transformacje XML w PHP
 Name:		php-pear-%{_pearname}
-Version:	0.8.2
+Version:	0.9.0
 Release:	1
 License:	PHP 3.00
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	d20de503a1cb7fd12f3dd76c3b8656aa
+# Source0-md5:	356aeec6da49c5d690d17564bb8c5792
 URL:		http://pear.php.net/package/XML_Transformer/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
