@@ -31,7 +31,7 @@ In PEAR status of this package is: %{_status}.
 %description -l pl
 Z klas± XML_Transformer mo¿na ³atwo zwi±zaæ funkcjonalno¶æ PHP z
 tagami XML, transformuj±c wej¶ciowe drzewo XML w wyj¶ciowe drzewo XML
-bez potrzeby stosowania XSLT. Pojedyñczy element XML mo¿e byæ
+bez potrzeby stosowania XSLT. Pojedynczy element XML mo¿e byæ
 przeci±¿ony funkcjami PHP, metodami i statycznymi wywo³aniami metod,
 przestrzeñ nazw XML mo¿e byæ zarejestrowana, aby mo¿na by³o je
 obs³ugiwaæ przez klasy PHP.
