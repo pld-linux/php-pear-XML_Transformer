@@ -8,13 +8,13 @@ Summary:	%{_pearname} - XML transformations in PHP
 Summary(pl):	%{_pearname} - transformacje XML-a w PHP
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
-Release:	2
+Release:	2.1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	11dc89fdad2195a939354b71a568bacf
 URL:		http://pear.php.net/package/XML_Transformer/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,23 +38,41 @@ obs³ugiwaæ przez klasy PHP.
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl):	Testy dla PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+AutoReq:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl
+Testy dla PEAR::%{_pearname}.
+
 %prep
-%setup -q -c
+%pear_package_setup
+
+install -d ./%{php_pear_dir}/tests
+mv ./%{php_pear_dir}/{%{_class}/%{_subclass}/Tests,tests/%{_pearname}}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/{Driver,Namespace}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
-install %{_pearname}-%{version}/%{_subclass}/Driver/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Driver
-install %{_pearname}-%{version}/%{_subclass}/Namespace/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Namespace
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{README,%{_subclass}/Tests}
+%doc install.log
+%doc docs/%{_pearname}/*
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
