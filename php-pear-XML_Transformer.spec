@@ -8,14 +8,19 @@ Summary:	%{_pearname} - XML transformations in PHP
 Summary(pl):	%{_pearname} - transformacje XML-a w PHP
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
-Release:	2.1
+Release:	2.4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	11dc89fdad2195a939354b71a568bacf
 URL:		http://pear.php.net/package/XML_Transformer/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-common >= 3:4.2.0
+Requires:	php-common < 3:5.1
 Requires:	php-pear
+Requires:	php-pcre
+Requires:	php-xml
+Requires:	php-pear-XML_Util >= 1.1.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
