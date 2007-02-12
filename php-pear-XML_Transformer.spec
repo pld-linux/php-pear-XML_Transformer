@@ -4,7 +4,7 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - XML transformations in PHP
-Summary(pl):	%{_pearname} - transformacje XML-a w PHP
+Summary(pl.UTF-8):   %{_pearname} - transformacje XML-a w PHP
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
 Release:	4
@@ -35,19 +35,19 @@ can be registered to be handled by PHP classes.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Z klas± XML_Transformer mo¿na ³atwo zwi±zaæ funkcjonalno¶æ PHP z
-tagami XML, transformuj±c wej¶ciowe drzewo XML w wyj¶ciowe drzewo XML
-bez potrzeby stosowania XSLT. Pojedynczy element XML mo¿e byæ
-przeci±¿ony funkcjami PHP, metodami i statycznymi wywo³aniami metod,
-przestrzeñ nazw XML mo¿e byæ zarejestrowana, aby mo¿na by³o je
-obs³ugiwaæ przez klasy PHP.
+%description -l pl.UTF-8
+Z klasÄ… XML_Transformer moÅ¼na Å‚atwo zwiÄ…zaÄ‡ funkcjonalnoÅ›Ä‡ PHP z
+tagami XML, transformujÄ…c wejÅ›ciowe drzewo XML w wyjÅ›ciowe drzewo XML
+bez potrzeby stosowania XSLT. Pojedynczy element XML moÅ¼e byÄ‡
+przeciÄ…Å¼ony funkcjami PHP, metodami i statycznymi wywoÅ‚aniami metod,
+przestrzeÅ„ nazw XML moÅ¼e byÄ‡ zarejestrowana, aby moÅ¼na byÅ‚o je
+obsÅ‚ugiwaÄ‡ przez klasy PHP.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -56,7 +56,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
