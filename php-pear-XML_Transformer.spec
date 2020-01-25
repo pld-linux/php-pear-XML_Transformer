@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		XML
 %define		_subclass	Transformer
 %define		_status		stable
